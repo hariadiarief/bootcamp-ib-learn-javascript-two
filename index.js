@@ -41,7 +41,7 @@ console.log(search_name("gatot"));
 var array1 = ["a", "b", "c"];
 var text = "";
 
-array1.forEach(function(element) {
+array1.forEach(function (element) {
   text += element + ",";
 });
 
@@ -53,10 +53,36 @@ let nameConcat = names1.concat(names2);
 let displayName = "";
 
 //Style One
-nameConcat.forEach(function(element) {
+nameConcat.forEach(function (element) {
   displayName += element + ", ";
 });
 console.log(displayName);
 
 //Style Two
 console.log(nameConcat.join(", "));
+
+//Level 5
+const names = [
+  "Mr. Fahri",
+  null,
+  undefined,
+  "Mr. Abdul",
+  24,
+  "Mrs. Josephhine",
+  "Mr. Joseph",
+  "Mr. Paul",
+  32,
+  "Mrs. Paula",
+  7,
+  22,
+  "Mr. Hakim"
+];
+
+function stringOnly(inputedName) {
+  const result = inputedName.filter(data => {
+    return typeof data === "string";
+  });
+  console.log(result);
+}
+
+const string_filter = stringOnly(names);
